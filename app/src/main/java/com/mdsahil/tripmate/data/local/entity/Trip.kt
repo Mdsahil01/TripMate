@@ -1,0 +1,14 @@
+package com.mdsahil.tripmate.data.local.entity
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "trips")
+data class Trip(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val name: String,
+    val description: String? = null,
+    val createdDate: Long = System.currentTimeMillis(),
+    val isCompleted: Boolean = false
+)
